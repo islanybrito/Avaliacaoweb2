@@ -12,7 +12,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
  
-    <title>Sistema Aula</title>
+    <title>Sistema Loja de Brinquedos</title>
 
     <style>
     </style>
@@ -25,9 +25,11 @@
   <!-- Sidebar  -->
   <nav id="sidebar" >
       <div class="sidebar-header">
-         <a href="{% url 'listar_clientes' %}" class="menulink"> <h3>Brinquedos e Sonhos</h3> </a>
+        <div class="logo">
+          <img src="{% static 'images/images.jpg' %}" alt="Logotipo" style="width: 130px; height: auto;" />
+         <a href="{% url 'listar_clientes' %}" class="menulink"> <h3>ABC Kids</h3> </a>
          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"></button>
-      </div>
+      </div> </div>
       <ul class="list-unstyled components" class="menulink">
           <li>
               <a href="{% url 'listar_clientes' %}" class="menulink" ><i class="fa fa-users fa-fw"></i> Clientes</a>
