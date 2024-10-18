@@ -143,9 +143,15 @@ def atualizar_produto(request, id):
             return redirect('listar_produtos')
     else:
         form = ProdutoForm(instance=produto)
-    return render(request, 'pedidos/atualizar_produto.html', {'form': form})
+    return render(request, 'produtos/atualizar_produto.html', {'form': form})
 
-
+@login_required
+def deletar_produto(request, id):
+    produto = get_object_or_404(Produto, id=id)
+    if request.method == "POST":
+        produto.delete()
+        return redirect('listar_produtos')  # Redireciona para a lista de pedidos
+    return render(request, 'produtos/deletar_produto.html', {'produto': produto})
 
 @login_required
 def exportar_produtos_pdf(request):

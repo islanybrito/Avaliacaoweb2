@@ -15,7 +15,7 @@
     </tr>
   </thead>
   <tbody>
-    {% for produto in produto %}
+    {% for produto in produtos %}
     <tr>
       <td>{{ produto.descricao }}</td>
       <td>{{ produto.quantidade }}</td>
@@ -23,7 +23,7 @@
       <td>
         <a href="{% url 'atualizar_produto' produto.id %}" class="btn colorprimarybtn2 mb-2">Editar</a>
         <!-- Botão para deletar com confirmação -->
-        <form action="{% url 'deletar_produto' produto.id %}" method="POST" style="display:inline;">
+        <form action="{% url 'deletar_produto' produto.id%}" method="POST" style="display:inline;">
             {% csrf_token %}
             <button type="submit" style="background-color: red; color: white" class="btn colorprimarybtn2 mb-2"  onclick="return confirm('Tem certeza que deseja excluir este produto?');">Deletar</button>
         </form>

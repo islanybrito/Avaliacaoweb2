@@ -19,4 +19,5 @@ urlpatterns = [
     path('produtos/novo/', views.criar_produto, name='criar_produto'),
     path('produtos/editar/<int:id>/', views.atualizar_produto, name='atualizar_produto'),
     path('exportar_produtos_pdf/', views.exportar_produtos_pdf, name='exportar_produtos_pdf'),
+    path('deletar/<int:id>/', views.deletar_produto, name='deletar_produto'),
 ]
